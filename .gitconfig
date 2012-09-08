@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/roberto/.gitignore
+	excludesfile = ~/.gitignore
   editor = mvim
   whitespace = trailing-space,space-before-tab
 
