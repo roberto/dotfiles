@@ -14,12 +14,12 @@
   branch = true
   diff = true
 [alias]
-  st = status
+  undo = reset --soft HEAD^
+  s = status
   ci = commit
   co = checkout
   br = branch
   ls = branch
-  s  = status
   a  = add
   b  = branch
   d  = diff
@@ -40,3 +40,6 @@
 
 [github]
   user  = roberto
+
+[merge]
+  tool  = vimdiff
