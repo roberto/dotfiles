@@ -7,4 +7,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export JAVA_HOME=`/usr/libexec/java_home`
 export JRUBY_OPTS=--1.9
 
+export EDITOR='mvim -p'
+
 PATH=/usr/local/sbin:/usr/local/bin:$PATH
