@@ -11,5 +11,5 @@ PATH=/usr/local/sbin:/usr/local/bin:$PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 function keepcoding {
-  git status --porcelain | awk '$1 != "D" { print $2}' | xargs $EDITOR
+  git status --porcelain --ignore-submodules | awk '$1 != "D" { print $2}' | xargs $EDITOR
 }
