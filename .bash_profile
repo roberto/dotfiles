@@ -8,18 +8,31 @@ PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export JAVA_HOME=`/usr/libexec/java_home`
 
 # ruby
-export RBENV_ROOT=/usr/local/opt/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # jruby
 export JRUBY_OPTS=--1.9
 
 # python
-export PATH=/usr/local/share/python:$PATH
-export WORKON_HOME=~/.python-envs/
-source /usr/local/share/python/virtualenvwrapper.sh
+#export PATH=/usr/local/share/python:$PATH
+#export WORKON_HOME=~/.python-envs/
+#source /usr/local/share/python/virtualenvwrapper.sh
 
-# git
-function keepcoding {
-  git status --porcelain --ignore-submodules | awk '$1 != "D" { print $2}' | xargs $EDITOR
-}
+# android
+export PATH=~/Code/android-sdk/platform-tools:$PATH
+
+# npm
+export PATH=/usr/local/share/npm/bin:$PATH
+
+# go
+export GOPATH=~/Code/learning/go
+
+# powerline
+#. ~/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
+
+# Mou.app
+alias mou='open -a Mou.app'
+
+# z
+. `brew --prefix`/etc/profile.d/z.sh
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
