@@ -7,7 +7,7 @@
   whitespace = fix
 
 [color]
-  ui = true ;doesnt work for some reason ...
+	ui = auto
 
   interactive = true
   status = true
@@ -36,6 +36,11 @@
   tags = log --tags --date-order --simplify-by-decoration --pretty='format:%ai %d'
   kw = !git status --porcelain --ignore-submodules | awk '$1 != "D" { print $2}' | xargs $EDITOR
   top = !git log --format=format:%an | sort | uniq -c | sort -r
+  df = diff --cached --color --color-words
+  dff = diff --color --color-words
+  current-branch = rev-parse --abbrev-ref HEAD
+  graph = log --graph --decorate --oneline --branches
+  prom = pull --rebase origin master
 
 [user]
   email = roberto.tech@gmail.com
@@ -46,3 +51,7 @@
 
 [merge]
   tool  = vimdiff
+[push]
+	default = current
+[push]
+	default = current
