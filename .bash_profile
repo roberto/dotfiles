@@ -36,3 +36,6 @@ alias mou='open -a Mou.app'
 . `brew --prefix`/etc/profile.d/z.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# simple find
+alias where='find . -name '
