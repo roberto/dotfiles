@@ -41,7 +41,7 @@ alias psql='postgres -D /usr/local/var/postgres &'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # simple find
-alias where='find . -name '
+alias where='find . -name'
 
 # http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 export MARKPATH=$HOME/.marks
