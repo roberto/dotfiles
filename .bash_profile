@@ -32,6 +32,9 @@ export GOPATH=~/Code/learning/go
 # Mou.app
 alias mou='open -a Mou.app'
 
+# PostgreSQL
+alias psql='postgres -D /usr/local/var/postgres &'
+
 # z
 . `brew --prefix`/etc/profile.d/z.sh
 
