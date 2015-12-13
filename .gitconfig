@@ -35,6 +35,7 @@
   ro = !git fetch origin && git reset --hard origin/master
   tags = log --tags --date-order --simplify-by-decoration --pretty='format:%ai %d'
   kw = !git status --porcelain --ignore-submodules | awk '$1 != "D" { print $2}' | xargs $EDITOR
+  pw = !git log -1 --raw | grep ^: | awk '$5 != "D" { print $6}' | xargs $EDITOR
   top = !git log --format=format:%an | sort | uniq -c | sort -r
   df = diff --cached --color --color-words
   dff = diff --color --color-words
