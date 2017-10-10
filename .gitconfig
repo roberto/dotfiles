@@ -1,19 +1,21 @@
 [core]
-	excludesfile = ~/.gitignore
-  editor = mvim
+  excludesfile = ~/.gitignore
+  editor = vim
   whitespace = trailing-space,space-before-tab
 
 [apply]
   whitespace = fix
 
 [color]
-	ui = auto
-
+  ui = auto
   interactive = true
   status = true
   branch = true
   diff = true
+
 [alias]
+  punch = push --force-with-lease
+  vommit = commit
   undo = reset --soft HEAD^
   s = status
   ci = commit
@@ -42,6 +44,9 @@
   current-branch = rev-parse --abbrev-ref HEAD
   graph = log --graph --decorate --oneline --branches
   prom = pull --rebase origin master
+  tab = checkout -
+  # git acom message pair
+  acom = "!f() { story=$(git rev-parse --abbrev-ref HEAD | cut -d '/' -f1); echo \"$story: $1. co-author: @$2\" | git commit -F -; }; f"
 
 [user]
   email = roberto.tech@gmail.com
@@ -52,7 +57,6 @@
 
 [merge]
   tool  = vimdiff
+
 [push]
-	default = current
-[push]
-	default = current
+  default = current
