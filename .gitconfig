@@ -16,6 +16,7 @@
 [alias]
   punch = push --force-with-lease
   vommit = commit
+  statsu = status
   undo = reset --soft HEAD^
   s = status
   ci = commit
@@ -44,6 +45,7 @@
   current-branch = rev-parse --abbrev-ref HEAD
   graph = log --graph --decorate --oneline --branches
   prom = pull --rebase origin master
+  prod = pull --rebase origin development
   tab = checkout -
   # git acom message pair
   acom = "!f() { story=$(git rev-parse --abbrev-ref HEAD | cut -d '/' -f1); echo \"$story: $1. co-author: @$2\" | git commit -F -; }; f"
