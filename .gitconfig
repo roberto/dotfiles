@@ -17,38 +17,26 @@
   punch = push --force-with-lease
   vommit = commit
   statsu = status
+  xuxu = cherry-pick
   undo = reset --soft HEAD^
   s = status
-  ci = commit
-  co = checkout
-  br = branch
   ls = branch
-  a  = add
-  b  = branch
+  df = diff --cached --color --color-words
+  dff = diff --color --color-words
   d  = diff
   dc = diff --cached
-  v  = show
   l  = log --pretty=oneline
-  ll = log
-  cp = cherry-pick
-  c  = checkout
-  cc = commit
   ri = rebase -i HEAD~10
-  sh = !git-sh
   ro = !git fetch origin && git reset --hard origin/master
   tags = log --tags --date-order --simplify-by-decoration --pretty='format:%ai %d'
   kw = !git status --porcelain --ignore-submodules | awk '$1 != "D" { print $2}' | xargs $EDITOR
   pw = !git log -1 --raw | grep ^: | awk '$5 != "D" { print $6}' | xargs $EDITOR
-  top = !git log --format=format:%an | sort | uniq -c | sort -r
-  df = diff --cached --color --color-words
-  dff = diff --color --color-words
+  top = shortlog -s -n
   current-branch = rev-parse --abbrev-ref HEAD
   graph = log --graph --decorate --oneline --branches
   prom = pull --rebase origin master
-  prod = pull --rebase origin development
   tab = checkout -
-  # git acom message pair
-  acom = "!f() { story=$(git rev-parse --abbrev-ref HEAD | cut -d '/' -f1); echo \"$story: $1. co-author: @$2\" | git commit -F -; }; f"
+  storyp = "!f() { story=$(git rev-parse --abbrev-ref HEAD | cut -d '/' -f1); echo \"$story: $1. co-author: @$2\" | git commit -F -; }; f"
 
 [user]
   email = roberto.tech@gmail.com
@@ -58,7 +46,6 @@
   user  = roberto
 
 [merge]
-  tool  = vimdiff
-
+  tool  = vimdiff 
 [push]
   default = current
